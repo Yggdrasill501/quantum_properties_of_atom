@@ -1,1 +1,1 @@
-# Quantum Properties of Atom
+# Quantum Properties of an Atom
