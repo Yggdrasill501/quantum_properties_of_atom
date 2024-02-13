@@ -1,0 +1,5 @@
+cirq
+numpy
+xarray
+pandas
+matplotlib
