@@ -1,10 +1,10 @@
 # First experiment
 
-# Errors 
-OFFSET_MULTIMETER_1 = float(003)
-OFFSET_MULTIMETER_2 = float(002)
+# Errors
+OFFSET_MULTIMETER_1 = 3
+OFFSET_MULTIMETER_2 = 2
 
-photon_volatage={
+PHOTON_VOLTAGE = {
     "shade1": {
         578: 360,
         546: 514,
