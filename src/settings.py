@@ -1,3 +1,7 @@
+import scipy.constants
+
+PLANCK_CONSTANT = scipy.constansts.Planck
+
 # First experiment
 
 # Errors
