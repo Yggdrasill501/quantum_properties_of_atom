@@ -1,6 +1,6 @@
 import scipy.constants
 
-PLANCK_CONSTANT = scipy.constansts.Planck
+PLANCK_CONSTANT = scipy.constants.Planck
 
 # First experiment
 
@@ -9,6 +9,11 @@ OFFSET_MULTIMETER_1 = 3
 OFFSET_MULTIMETER_2 = 2
 
 PHOTON_VOLTAGE = {
+    """Dictionary from experiment.
+    
+    :key wavelength: wavelenght of filter,
+    :value voltage: voltage of photon.
+    """
     "shade1": {
         578: 360,
         546: 514,
