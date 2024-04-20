@@ -1,6 +1,7 @@
 import scipy.constants
 
 PLANCK_CONSTANT = scipy.constants.Planck
+LIGHT_SPEED = scipy.constants.speed_of_light
 
 # First experiment
 
