@@ -1,6 +1,0 @@
-cirq
-numpy
-xarray
-pandas
-matplotlib
-scipy
