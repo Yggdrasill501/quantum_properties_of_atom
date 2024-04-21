@@ -7,7 +7,7 @@ LIGHT_SPEED = scipy.constants.speed_of_light
 
 # Errors
 OFFSET_MULTIMETER_1 = 3
-OFFSET_MULTIMETER_2 = 2
+OFFSET_MULTIMETER_11 = 2
 
 PHOTON_VOLTAGE = {
     """Dictionary from experiment.
@@ -37,3 +37,6 @@ PHOTON_VOLTAGE = {
         365: 1650
         }
 }
+
+OFFSET_MULTIMETER_2 = 10
+OFFSET_MULTIMETER_21 = 15
