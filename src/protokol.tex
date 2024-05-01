@@ -1,33 +1,44 @@
 \documentclass{article}
-
 \usepackage[slovak]{babel}
 \usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 % Useful packages
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{adjustbox}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
-
-\title{Meranie kvantových vlastností atómu}
-\author{Rebecca Kozmová, Filip Žitný, Šimon Nemčič}
-
+\usepackage{caption}
+\title{\textbf{Úloha č. 11: Meranie kvantových vlastností atómu}}
+\author{\textbf{Fyzikálne praktikum 2}}
+\date{} 
 \begin{document}
 \maketitle
 
 
 
+\begin{tabular}{ll}
+\textbf{Autori:} {Filip Žitný, Šimon Nemčič, Rebecca Kozmová}&
+\textbf{Kruh:} {Pondelok 14:00} \\ 
+\textbf{Číslo skup.:} {11} &
+\textbf{Dátum: }18.3-8.4.2024\\
+\end{tabular}
+\hrule
+
+
 \section{Pracovné úlohy}
-1. Zostavte aparatúru pre prevedenie Franck-Hertzovho pokusu a nechajte ortuťovú trubicu zahriať na zvolenú teplotu.\\
-2. Pozorujte závislosť prechádzajúceho prúdu $I_A$ na urýchlujúcom napätí $U_A$ (Franckovu-Hertzovu krivku) na digitálnom osciloskope. \\Nájdite optimálne hodnoty parametrov $U_1$ a $U_3$ a diskutujte ich vplyv na podobu Franck-Hertzovej krivky.\\
-3. Pomocou dodatočných voltmetrov  premerajte Franck-Hertzovu krivku pre napätie $U_2$ v
+1. Zostavte aparatúru pre stanovenie Planckovej konštanty podľa návodu.\\
+2. Vykreslite závislosť energie elektrónu a frekvencie  žiarenia do grafu. Z nameraných hodnôt určite prahovú frekvenciu fotokatódy.\\
+3. Z nameraných dát stanovte Planckovu konštantu a výsledok porovnajte s tabuľkovou hodnotou.
+4. Zostavte aparatúru pre vykonanie Franck-Hertzovho pokusu a nechajte ortuťovú trubicu zahriať na zvolenú teplotu.\\
+5. Pozorujte závislosť prechádzajúceho prúdu $I_A$ na urýchlujúcom napätí $U_A$ (Franckovu-Hertzovu krivku) na digitálnom osciloskope. \\Nájdite optimálne hodnoty parametrov $U_1$ a $U_3$ a diskutujte ich vplyv na podobu Franck-Hertzovej krivky.\\
+6. Pomocou dodatočných voltmetrov  premerajte Franck-Hertzovu krivku pre napätie $U_2$ v
 rozmedzí  od 0 do 30 V a zostavte jej graf. Namerajte aspoň 80 hodnôt.\\
-4. V okolí maxím a miním Franck-Hertzovej krivky preložte namerané dáta polynómami  druhého
+7. V okolí maxím a miním Franck-Hertzovej krivky preložte namerané dáta polynómami  druhého
 stupňa a určte súradnice  extrémov. Postupnou metódou vypočítajte  excitačnú  energiu atómu ortute. Výsledok porovnejte s tabuľkovou hodnotou.\\
-5. Využite výslednú  excitačnú energiu a hodnotu Planckovej konštanty h získanú v úlohe 11a a s ich pomocou spočítajte, akú vlnovú dĺžku  by mal fotón vyžiarený pri  deexcitácii  atómu 
+8. Využite výslednú  excitačnú energiu a hodnotu Planckovej konštanty h získanú v úlohe 11a a s ich pomocou spočítajte, akú vlnovú dĺžku  by mal fotón vyžiarený pri  deexcitácii  atómu 
 ortute. Výsledok porovnajte s pôvodným výsledkom Francka a Hertza.\\
-6. Zostavte aparatúru pre stanovenie Planckovej konštanty podľa návodu.\\
-7. Vykreslite závislosť energie elektrónu a frekvencie  žiarenia do grafu. Z nameraných hodnôt určite prahovú frekvenciu fotokatódy.\\
-8. Z nameraných dát stanovte Planckovu konštantu a výsledok porovnajte s tabuľkovou hodnotou.
+
 \section{Pomôcky}
 fotoelektrická bunka, vysokotlaková ortuťová lampa+zdroj napätia, irisová clona, šošovka (f = 100 mm),
 interferenčné filtre (578 nm, 546 nm, 436 nm, 405 nm, 365 nm), STE kľúčový spínač, zosilňovač elektrometra, STE kondenzátor (100 pF, 630 V), voltmeter a optická lavica, 2× optický jazdec (90 mm),
@@ -37,49 +48,120 @@ Instek GDS-1072B, 2× tienený kábel BNC/4 mm, 2× voltmeter, vodiče
 \subsection{Fotoelektrický jav}
 Fotoelektrický jav alebo fotoelektrická emisia  je experimentálne pozorovaný jav, kedy svetlo vhodnej vlnovej dĺžky pri dopade na fotoemisivný materiál, vyráža z atómov elektróny. Emitované elektróny sa nazývajú fotoelektróny. Tento jav je popísaný pomocou vzorca, ktorý dáva do súvisloti maximálnu kinetickú energiu fotoelektrónov $(E_e)$ s frekvenciou absorbovaných fotónov $(f)$ a prahovou frekvenciou fotoemisného materiálu $(f_0)$
 \begin{equation}
-eU_stop=hf-hf_0,
-\end{equation} kde $h$ je Planckova konštanta 
+eU_{stop}=hf-hf_0\label{eq:eU},
+\end{equation} kde $h$ je Planckova konštanta, $U_{stop}$ je zastavovací potenciál a $e$ náboj elektrónu.  
 
 \subsection{Franck-Hertzov pokus}
+Pre excitačnú energiu materiálu $E_{ex}$ platí vzťah 
+\begin{equation}
+E_{ex}= eU_0\label{eq:Eex},
+\end{equation}
+kde $e$ je náboj elektrónu a $U_0$ je rozdiel medzi maximami respektíve minimami prúdu v závisloti na napätí.
 Pre frekvenciu fotónov emitovaných excitovaným materiálom platí vzťah 
 \begin{equation}
-f=E_ex/h
+f=\frac{E_{ex}}{h}\label{eq:f}
 \end{equation}
+
 
 \section{Postup merania}
 \subsection{Meranie Planckovej konštanty}
-Zapneme vysokotlakovú ortuťovú lampu a necháme ju zahrievať pokým nedosiahne požadovanú teplotu. Lampu, fotobunku, šošovku a clonu namontujeme na optickú lavicu pomocou vhodných optických jazdcov. Výšku ošovky a clony nastavíme tak, aby lúč svetla z ortuťovej lampy dopadal iba na fotocitlivú časť fotobunky. Umiestnime kryt na fotobunku a filter s clonou pred fotobunku. Na elektrometrický zosilovač pripojíme dva konektory, na ne kondenzátor a kľúčový spínač. Ďalej pripojíme multimeter a ten zapojíme do elektrickej siete. Zapneme multimeter a umiestnime filter pre žlté svetlo do dráhy svetelného lúča. Podržíme kľúčový spínač, kým multimeter neukáže hodnotu 0V.Meriame, pokým sa hodnota neustáli na medznom napätí $U_stop$. Postup opakujeme pre zelený, modrý, fialový a UV filter. Zmeníme intenzitu dopadajúceho svetla a merania opakujeme. 
+Zapneme vysokotlakovú ortuťovú lampu a necháme ju zahrievať pokým nedosiahne požadovanú teplotu. Lampu, fotobunku, šošovku a clonu namontujeme na optickú lavicu pomocou vhodných optických jazdcov. Výšku ošovky a clony nastavíme tak, aby lúč svetla z ortuťovej lampy dopadal iba na fotocitlivú časť fotobunky. Umiestnime kryt na fotobunku a filter s clonou pred fotobunku. Na elektrometrický zosilovač pripojíme dva konektory, na ne kondenzátor a kľúčový spínač. Ďalej pripojíme multimeter a ten zapojíme do elektrickej siete. Zapneme multimeter a umiestnime filter pre žlté svetlo do dráhy svetelného lúča. Podržíme kľúčový spínač, kým multimeter neukáže hodnotu 0 V.Meriame, pokým sa hodnota neustáli na medznom napätí $U_{stop}$. Postup opakujeme pre zelený, modrý, fialový a UV filter. Zmeníme intenzitu dopadajúceho svetla a merania opakujeme. 
 \subsection{Franck-Hertzov pokus}
-Franck-Hertzovu trubicu zasunieme do medeného valca vo vnútri elektrickej piecky. Zapneme napájaciu jednotku a skontrolujeme, že finálna teplota piecky je nastavená na 170-180 $°C$. Čakáme cca 30 minút, kým aparatúra  dosiahne požadovanú teplotu. Následne pripojíme osciloskop, na ktorom budeme pozorovať krivku, a teda závislosť prúdu $I_A$ na napätí $U_2$. Vykonáme optimalizáciu parametrov $U_1$ a $U_3$ pre požadovaný tvar krivky. Odpojíme oscilátor a k svorkám s výstupnými signálmi $U_2/10$ a $I_A$ pripojíme digitálne voltmetre. V režime MAN zmeriame 80 hodnôt pre $U_2$ v rozmedzí 0 až 30 $V$.
+Franck-Hertzovu trubicu zasunieme do medeného valca vo vnútri elektrickej piecky. Zapneme napájaciu jednotku a skontrolujeme, že finálna teplota piecky je nastavená na 170-180°C. Čakáme cca 30 minút, kým aparatúra  dosiahne požadovanú teplotu. Následne pripojíme osciloskop, na ktorom budeme pozorovať krivku, a teda závislosť prúdu $I_A$ na napätí $U_2$. Vykonáme optimalizáciu parametrov $U_1$ a $U_3$ pre požadovaný tvar krivky. Odpojíme oscilátor a k svorkám s výstupnými signálmi $U_2/10$ a $I_A$ pripojíme digitálne voltmetre. V režime MAN zmeriame 80 hodnôt pre $U_2$ v rozmedzí 0 až 30 V.
 
 
 
 \section{Vypracovanie}
+\subsection{Meranie Planckovej konštanty}
+Na Obr. \ref{fig:graf1} je zobrazené napätie $U_{stop}$ a jeho závislosť na frekvencii žiarenia $f$ pre rôznu priepustnosť interferenčných filtrov s vlnovými dĺžkami: 578 nm, 546 nm, 436 nm, 405 nm a 365 nm. \href{https://www.labo.cz/mftabulky.htm}{tabuľková hodnota} Planckovej konštanty  je $h_{tab}$ = $4,135667696 \times 10^{-15}$ eVs. S vyyužitím vzťahu (\ref{eq:eU}) získavame experimentálnu hodnotu Planckovej konštanty $h_{exp}$ = ($2,19 \pm 0,03)\times 10^{-15}$ eVs.
+Prahová frekvencia fotokatódy je $f_0$ = ($346 \pm 20$ ) THz. 
+\subsection{Franck-Hertzov pokus}
+Tab. \ref{tab:tab1} obsahuje získané súradnice maxím a miním. Graf nameraných hodnôt prúdu $I$ a napätia $U$ s kvadratickými fitmi je zobrazený na Obr. \ref{fig:graf2}. Priemerný rozdiel napätí pre maximá je  $U_0^{max}$= ($5,122 \pm 0,002 $) V a pre minimá   $U_0^{min}$= ($4,865 \pm 0,002 $) V. S využitím vzťahu (\ref{eq:Eex}) získame excitačnú energiu atómu ortuti  $E_{ex}^{max}$ = ($5,122 \pm 0,002 $) eV a $E_{ex}^{min}$ = ($4,865 \pm 0,002 $) eV. \href{https://www.labo.cz/mftabulky.htm}{Tabuľková hodnota} je $E_{ex}^{tab}$ = 4,9 eV. Frekvenciu žiarenia emitovaného excitovanými elektrónmi ortute získavame zo vzťahu (\ref{eq:f}). Výsledné hodnoty sú $f_{max}$ = $(2300 \pm 100)$ THz a $f_{min}$ = $(2200 \pm 100)$ THz. \href{https://www.labo.cz/mftabulky.htm}{Tabuľková hodnota} je $f_{tab}$ = $1181,1$ THz.  
 \section{Diskusia}
+\subsection{Meranie Planckovej konštanty}
+Naša experimentálne zistená hodnota Planckovej konštanty $h_{exp}$ = ($2,19 \pm 0,03)\times 10^{-15}$ eVs sa líši od tabuľkovej hodnoty podľa \href{https://www.labo.cz/mftabulky.htm}{tabuľkovej hodnoty} $h_{tab}$ = $4,135667696 \times 10^{-15}$ eVs. Rozdiel je znateľný, rádovo sa nám však podarilo dosiahnuť správnu hodnotu. Daná nepresnosť výsledku môže byť spôsobená viacerými faktormi. Vysoko pravdepodobné je, že meranie bolo ovplyvnené nestabilitou napätia na použitom multimetri počas vykonania experimentu. Táto nestabilita viedla k tomu, že sme boli nútení použiť hodnoty, ktoré sa na multimetri udržali najdlhšiu dobu. Aj napriek kontrole správneho zapojenia obvodu a výmene multimetra, sa nám tento problém nepodarilo odstrániť.Nakoľko sme očakávali prekročenie napätia 1 V pre 3 najvyššie hodnoty frekvencie, a stalo sa tak iba pre 1, ako ďalšia možná príčina prichádza do úvahy nedostatočná stabilizácia napätia kvôli skrytej závade kondenzátora.
+\subsection{Franck-Hertzov pokus}
+Naša experimentálne získaná hodnota excitačnej energie atómu ortuti, $E_{ex}^{min}$ = ($4,865 \pm 0,002 $) eV sa približuje k \href{https://www.labo.cz/mftabulky.htm}{tabuľkovej hodnote} $E_{ex}^{tab}$ = 4,9 eV, avšak stále  nie je úplne presná, ani so zohľadnením chyby v náš prospech. Naopak v našom druhom výsledku  $E_{ex}^{max}$ = ($5,122 \pm 0,002 $) eV môžme pozorovať značnejšiu odchýlku. Príčinou môže byť započítanie maxima v oblasti, kde sa namerané dáta značne vychylovali od ďalšieho vývoja krivky. Celkovo sme nešťastne zvolili hodnoty manuálne meranej krivky s malým počtom hodnôt v oblasti maxím a miním, to ovplyvnilo presnosť našich výsledkov. Obe získané frekvencie žiarenia sa líšia od \href{https://www.labo.cz/mftabulky.htm}{tabuľkovej hodnoty} $f_{tab}$ = $1181,1$ THz z dôvodu použitia nepresnej Planckovej konštanty získanej v predchádzajúcom pokuse. 
 \section{Záver}
+Skúmali sme kvantové vlastnosti atómu a vykonali sme dva experimenty, ktoré nám pomohli lepšie ich pochopiť. Zostavili sme aparatúry pre dané pokusy, vykreslili grafy a získali sme hodnotu Planckovej konštanty  $h_{exp}$ = ($2,19 \pm 0,03)\times 10^{-15}$ eVs, prahovej frekvencie fotokatódy $f_0$ = ($346 \pm 20$ ) THz, excitačnej energie atómu ortuti $E_{ex}$ = ($4,865 \pm 0,002 $) eV a frekvenciu žiarenia emitovaného excitovanými atómami ortuti $f_{min}$ = $(2200 \pm 100)$ THz a $f_{max}$ = $(2300 \pm 100)$ THz.  
 \section{Použitá literatúra}
-1. Návod k úlohe Meranie kvantových vlastností atómu: Meranie Planckovej konštanty\\
-\url{https://moodle-vyuka.cvut.cz/pluginfile.php/729913/mod_resource/content/2/11b_Franck-Hertz_210408.pdf}\\
-2.Návod k úlohe Meranie kvantových vlastností atómu: Franck-Hertzov experiment\\
-\url{https://moodle-vyuka.cvut.cz/pluginfile.php/729913/mod_resource/content/2/11b_Franck-Hertz_210408.pdf}
+1. Návod k úlohe Meranie Planckovej konštanty. Online. Fyzikální praktika 2. Dostupné z \url{https://moodle-vyuka.cvut.cz/pluginfile.php/729913/mod_resource/content/2/11b_Franck-Hertz_210408.pdf}. [citované 2024-04-08].\\
+2.Návod k úlohe Franck-Hertzov experiment. Online. Fyzikální praktika 2. Dostupné z \url{https://moodle-vyuka.cvut.cz/pluginfile.php/729913/mod_resource/content/2/11b_Franck-Hertz_210408.pdf}. [citované 2024-04-08].\\
+3.Laboratorní průvodce.Tabuľky fyzikálnych veličín. Online. Dostupné z \url{https://www.labo.cz/mftabulky.htm}. [citované 2024-04-08]. \\
+4.  Wikipedia.Fotoelektrický jav. Online. Dostupné z \url{https://sk.wikipedia.org/wiki/Fotoelektrick%C3%BD_jav}.
+[citované 2024-04-08].  \\
 
+\section*{Prílohy}
 
-\begin{figure}
+\begin{table}[h]
+\centering
+\begin{adjustbox}{width=1.18\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c }
+\hline
+$U$ [V] & 2,290  & 6,040 & 8,860 & 10,720 & 13,270 & 15,270 & 18,050 & 20,400 & 23,500 &  25,500 & 27,900 \\ \hline
+$I$ [nA] & 1,560 & 0,381 & 1,790 & 0,480 & 3,110 & 0,640 & 4,650 & 0,740 & 6,650 & 1,280 & 7,050 \\ \hline
+\end{tabular}
+\end{adjustbox}
+\captionsetup{justification=centering}
+\caption{\label{tab:tab1} Tabuľka so súradnicami maxím a miním $U$ a $I$ nameranej Franck-Hertzovej krivky}
+\end{table}
+
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.75\linewidth]{idk.png}
-\caption{\label{fig:frog}Experimentálne nastavenie na optickej lavici}
+\caption{\label{fig:lavica}Experimentálne nastavenie na optickej lavici}
 \end{figure}
+
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{idkk.png}
-\caption{\label{fig:frog}Schéma zapojenia obvodu zosilovača elektrometru}
+\caption{\label{fig:obvod}Schéma zapojenia obvodu zosilovača elektrometru}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.75\linewidth]{Krivka.jpeg}
-\caption{\label{fig:frog}Krivka zobrazená na oscilátore po optimalizácii $U_1$ a $U_3$}
+\caption{\label{fig:oscilator}Krivka zobrazená na oscilátore po optimalizácii $U_1$ a $U_3$}
 \end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{graf1b.png}
+\caption{\label{fig:graf1}Graf nameraných hodnôt napätia U v závisloti na frekvencii žiarenia f }
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{graf2.png}
+\caption{\label{fig:graf2} Graf nameraných hodnôt prúdu $I$ v závislosti na napätí $U_2$ s kvadratickými fitmi}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{clony.png}
+\caption{\label{fig:clony} Namerané hodnoty vlnovej dĺžky  
+ $lambda$ a napätia $U$ s 3 nastaveniami clony pre meranie Planckovej konštanty }
+\end{figure}
+
+
+\begin{figure}[h] 
+  \centering
+  \begin{subfigure}[b]{0.3\linewidth} 
+    \includegraphics[width=\linewidth]{data1.png}
+    \label{fig:data1}
+  \end{subfigure}
+  \hspace{0.02\linewidth} 
+  \begin{subfigure}[b]{0.3\linewidth} 
+    \includegraphics[width=\linewidth]{data2.png}
+    \label{fig:data2}
+  \end{subfigure}
+  \hspace{0.02\linewidth} 
+  \begin{subfigure}[b]{0.3\linewidth} 
+    \includegraphics[width=\linewidth]{dat3.png}
+    \label{fig:data3}
+  \end{subfigure}
+  \caption{Namerané dáta vstupného napätia $U_2$ a výstupného napätia $U_A$ k meraniu Franck-Hertzovej krivky}
+  \label{fig:trojica_obrazkov}
+\end{figure} 
 
 \end{document}
